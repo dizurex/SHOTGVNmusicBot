@@ -1,8 +1,7 @@
-<h1 align="centre">🎵 BOT MUSIC MAN 🎵</h1>
+<h1 align="centre">SHOTGVNmusicBot</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@MusikManbot](https://t.me/MusikManbot)
+### Available on telegram as [@SHOTGVNmusic_bot](https://t.me/SHOTGVNmusic_bot)
 
 <h2> Features 🔥 </h2>
 
@@ -20,10 +19,10 @@
 
 ### 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrismanaziz/Music-Man/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hollaxif/SHOTGVNmusicBot/tree/master)
 
 Get pyrogram (p)  `SESSION` from here:
-[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1)
+[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@hollaxif/GenerateStringSession?lite=1&outputonly=1)
 
 ### Commands for Group 🛠
 #### For all in group
@@ -55,26 +54,3 @@ Get pyrogram (p)  `SESSION` from here:
 - `.yes` - approove someone to pm you
 - `.no` - disapproove someone to pm you
 + Sudo Users can execute any command in any groups
-
-### Credits
-Don't edit this part
-
-#### Special Credits
-- [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
-
-This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork Music Man won't exist. 
-Music-Man is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic)
-
-#### Contribtors
-- [Risman](https://github.com/mrismanaziz)
-- [InukaASiTH](https://github.com/InukaAsith): Dev
-- [Rojserbest](http://github.com/rojserbes): Dev
-- [Wrench](https://github.com/EverythingSuckz/): Dev
-- [QueenArzoo](https://github.com/QueenArzoo): Dev
-- [lucifeermorningstar](https://github.com/lucifeermorningstar): Dev
-- [AuraXNetwork](https://github.com/AuraXNetwork/AuraXMusicBot)
-- [Hamker Cat](https://github.com/thehamkercat/)
-- [Anjana-Ma](https://github.com/Anjana-Ma): 
-- [ImJanindu](https://github.com/ImJanindu): 
-- [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
-- [Original Repo owners](https://github.com/suprojects/CallsMusic)
