@@ -1,3 +1,3 @@
-from MusicMan.function.admins import admins, get, set
+from SHOTGVNmusicBot.function.admins import admins, get, set
 
 __all__ = ["set", "get", "admins"]
