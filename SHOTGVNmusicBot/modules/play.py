@@ -1,19 +1,3 @@
-# Daisyxmusic (Telegram bot project)
-# Copyright (C) 2021  Inukaasith
-# Copyright (C) 2021  TheHamkerCat (Python_ARQ)
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 
 import json
 import os
@@ -33,24 +17,24 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from MusicMan.config import ARQ_API_KEY
-from MusicMan.config import BOT_NAME as bn
-from MusicMan.config import DURATION_LIMIT
-from MusicMan.config import UPDATES_CHANNEL as updateschannel
-from MusicMan.config import que
-from MusicMan.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,BOT_USERNAME, OWNER
-from MusicMan.function.admins import admins as a
-from MusicMan.helpers.admins import get_administrators
-from MusicMan.helpers.channelmusic import get_chat_id
-from MusicMan.helpers.errors import DurationLimitError
-from MusicMan.helpers.decorators import errors
-from MusicMan.helpers.decorators import authorized_users_only
-from MusicMan.helpers.filters import command, other_filters
-from MusicMan.helpers.gets import get_file_name
-from MusicMan.services.callsmusic import callsmusic, queues
-from MusicMan.services.callsmusic.callsmusic import client as USER
-from MusicMan.services.converter.converter import convert
-from MusicMan.services.downloaders import youtube
+from SHOTGVNmusicBot.config import ARQ_API_KEY
+from SHOTGVNmusicBot.config import BOT_NAME as bn
+from SHOTGVNmusicBot.config import DURATION_LIMIT
+from SHOTGVNmusicBot.config import UPDATES_CHANNEL as updateschannel
+from SHOTGVNmusicBot.config import que
+from SHOTGVNmusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,BOT_USERNAME, OWNER
+from SHOTGVNmusicBot.function.admins import admins as a
+from SHOTGVNmusicBot.helpers.admins import get_administrators
+from SHOTGVNmusicBot.helpers.channelmusic import get_chat_id
+from SHOTGVNmusicBot.helpers.errors import DurationLimitError
+from SHOTGVNmusicBot.helpers.decorators import errors
+from SHOTGVNmusicBot.helpers.decorators import authorized_users_only
+from SHOTGVNmusicBot.helpers.filters import command, other_filters
+from SHOTGVNmusicBot.helpers.gets import get_file_name
+from SHOTGVNmusicBot.services.callsmusic import callsmusic, queues
+from SHOTGVNmusicBot.services.callsmusic.callsmusic import client as USER
+from SHOTGVNmusicBot.services.converter.converter import convert
+from SHOTGVNmusicBot.services.downloaders import youtube
 
 aiohttpsession = aiohttp.ClientSession()
 chat_id = None
@@ -464,7 +448,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "SHOTGVNmusicBot"
     usar = user
     wew = usar.id
     try:
@@ -542,14 +526,14 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ ", url="https://t.me/dizurex"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/ab13882bb05849b6ba170.jpg"
+        thumb_name = "https://telegra.ph/file/1189dbc8ccad35f2efc2f.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -589,7 +573,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ ", url="https://t.me/dizurex"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -668,7 +652,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ ", url="https://t.me/dizurex"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -726,7 +710,7 @@ async def ytplay(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "SHOTGVNmusicBot"
     usar = user
     wew = usar.id
     try:
@@ -806,7 +790,7 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ ", url="https://t.me/dizurex"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -865,7 +849,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "SHOTGVNmusicBot"
     usar = user
     wew = usar.id
     try:
@@ -925,7 +909,7 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/ab13882bb05849b6ba170.jpg"
+        thumbnail = "https://telegra.ph/file/1189dbc8ccad35f2efc2f.jpg"
 
     except:
         await res.edit("**Tidak Ditemukan Lagu Apa Pun!**")
@@ -940,7 +924,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/Lunatic0de")],
+            [InlineKeyboardButton(text="⛑ ", url="https://t.me/dizurex")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -1036,7 +1020,7 @@ async def lol_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ ", url="https://t.me/dizurex"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]

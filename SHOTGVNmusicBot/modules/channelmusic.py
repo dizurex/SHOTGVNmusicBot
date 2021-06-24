@@ -1,19 +1,3 @@
-# Daisyxmusic (Telegram bot project)
-# Copyright (C) 2021  Inukaasith
-# Copyright (C) 2021  TheHamkerCat (Python_ARQ)
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 
 import json
 import os
@@ -32,29 +16,29 @@ from pyrogram.types import Voice
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
-from MusicMan.modules.play import generate_cover
-from MusicMan.modules.play import arq
-from MusicMan.modules.play import cb_admin_check
-from MusicMan.modules.play import transcode
-from MusicMan.modules.play import convert_seconds
-from MusicMan.modules.play import time_to_seconds
-from MusicMan.modules.play import changeImageSize
-from MusicMan.config import BOT_NAME as bn
-from MusicMan.config import DURATION_LIMIT
-from MusicMan.config import UPDATES_CHANNEL as updateschannel
-from MusicMan.config import que
-from MusicMan.function.admins import admins as a
-from MusicMan.helpers.errors import DurationLimitError
-from MusicMan.helpers.decorators import errors
-from MusicMan.helpers.admins import get_administrators
-from MusicMan.helpers.channelmusic import get_chat_id
-from MusicMan.helpers.decorators import authorized_users_only
-from MusicMan.helpers.filters import command, other_filters
-from MusicMan.helpers.gets import get_file_name
-from MusicMan.services.callsmusic import callsmusic, queues
-from MusicMan.services.callsmusic.callsmusic import client as USER
-from MusicMan.services.converter.converter import convert
-from MusicMan.services.downloaders import youtube
+from SHOTGVNmusicBot.modules.play import generate_cover
+from SHOTGVNmusicBot.modules.play import arq
+from SHOTGVNmusicBot.modules.play import cb_admin_check
+from SHOTGVNmusicBot.modules.play import transcode
+from SHOTGVNmusicBot.modules.play import convert_seconds
+from SHOTGVNmusicBot.modules.play import time_to_seconds
+from SHOTGVNmusicBot.modules.play import changeImageSize
+from SHOTGVNmusicBot.config import BOT_NAME as bn
+from SHOTGVNmusicBot.config import DURATION_LIMIT
+from SHOTGVNmusicBot.config import UPDATES_CHANNEL as updateschannel
+from SHOTGVNmusicBot.config import que
+from SHOTGVNmusicBot.function.admins import admins as a
+from SHOTGVNmusicBot.helpers.errors import DurationLimitError
+from SHOTGVNmusicBot.helpers.decorators import errors
+from SHOTGVNmusicBot.helpers.admins import get_administrators
+from SHOTGVNmusicBot.helpers.channelmusic import get_chat_id
+from SHOTGVNmusicBot.helpers.decorators import authorized_users_only
+from SHOTGVNmusicBot.helpers.filters import command, other_filters
+from SHOTGVNmusicBot.helpers.gets import get_file_name
+from SHOTGVNmusicBot.services.callsmusic import callsmusic, queues
+from SHOTGVNmusicBot.services.callsmusic.callsmusic import client as USER
+from SHOTGVNmusicBot.services.converter.converter import convert
+from SHOTGVNmusicBot.services.downloaders import youtube
 
 chat_id = None
 
@@ -456,7 +440,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/1189dbc8ccad35f2efc2f.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -539,7 +523,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ Group", url="https://t.me/SHOTGVNgc"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -604,7 +588,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "SHOTGVNmusicBot"
     usar = user
     wew = usar.id
     try:
@@ -733,7 +717,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicMan"
+        user.first_name = "SHOTGVNmusicBot"
     usar = user
     wew = usar.id
     try:
@@ -766,7 +750,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @ to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -790,7 +774,7 @@ async def jiosaavn(client: Client, message_: Message):
         sname = songs.result[0].song
         slink = songs.result[0].media_url
         ssingers = songs.result[0].singers
-        sthumb = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        sthumb = "https://telegra.ph/file/1189dbc8ccad35f2efc2f.jpg"
         sduration = int(songs.result[0].duration)
     except Exception as e:
         await res.edit("Found Literally Nothing!, You Should Work On Your English.")
@@ -800,7 +784,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/Lunatic0de"),
+                    InlineKeyboardButton("⛑ Group", url="https://t.me/SHOTGVNgc"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]

@@ -1,30 +1,14 @@
-# Calls Music 1 - Telegram bot for streaming audio in group calls
-# Copyright (C) 2021  Roj Serbest
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 
 from asyncio.queues import QueueEmpty
-from MusicMan.config import que
+from SHOTGVNmusicBot.config import que
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from MusicMan.function.admins import set
-from MusicMan.helpers.channelmusic import get_chat_id
-from MusicMan.helpers.decorators import authorized_users_only, errors
-from MusicMan.helpers.filters import command, other_filters
-from MusicMan.services.callsmusic import callsmusic
+from SHOTGVNmusicBot.function.admins import set
+from SHOTGVNmusicBot.helpers.channelmusic import get_chat_id
+from SHOTGVNmusicBot.helpers.decorators import authorized_users_only, errors
+from SHOTGVNmusicBot.helpers.filters import command, other_filters
+from SHOTGVNmusicBot.services.callsmusic import callsmusic
 
 
 @Client.on_message(filters.command("adminreset"))
