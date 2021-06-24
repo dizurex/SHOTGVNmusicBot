@@ -1,2 +1,2 @@
-from MusicMan.services.callsmusic import queues
-from MusicMan.services.callsmusic.callsmusic import pytgcalls, run
+from SHOTGVNmusicBot.services.callsmusic import queues
+from SHOTGVNmusicBot.services.callsmusic.callsmusic import pytgcalls, run
